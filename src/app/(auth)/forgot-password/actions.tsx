@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { useMutation } from "react-query";
 import { toast } from "sonner";
 
-export const ForgotPassword = () => {
+export const useForgotPassword = () => {
   const forgotPasswordRequest = async (data: any) => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/forgot-password`,
