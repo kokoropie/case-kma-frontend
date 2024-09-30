@@ -4,11 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useState } from "react";
-import { useForgotPassword } from "./actions";
+import { ForgotPassword } from "./actions";
 import { Loader2 } from "lucide-react";
 
 const page = () => {
-  const { isLoading, forgotPassword } = useForgotPassword();
+  const { isLoading, forgotPassword } = ForgotPassword();
   const [email, setEmail] = useState("");
 
   const handleForgot = async (e: any) => {
