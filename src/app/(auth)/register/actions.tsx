@@ -38,7 +38,6 @@ export const useRegisterUser = () => {
 
   const {
     mutateAsync: register,
-    data,
     isLoading,
     error,
     isSuccess,

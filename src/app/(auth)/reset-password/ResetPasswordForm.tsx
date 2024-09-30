@@ -5,7 +5,6 @@ import { Label } from "@radix-ui/react-label";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useResetPassword } from "./actions";
-import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
 const ResetPasswordForm = ({
