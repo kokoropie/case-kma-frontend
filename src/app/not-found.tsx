@@ -28,9 +28,7 @@ const NotFound = () => {
       }
     };
 
-    useEffect(() => {
-      verify();
-    }, []);
+    verify();
   }
 
   if (url.includes("password-reset")) {
