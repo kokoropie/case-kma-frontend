@@ -8,7 +8,7 @@ import { toast } from "sonner";
 const NotFound = () => {
   const router = useRouter();
   const accessToken = getCookie("access_token");
-  const url = window.location.href;
+  const url = typeof window !== 'undefined' ? window.location.href : '';
 
   if (url.includes("verify-email")) {
     const newUrl = url.replace(
