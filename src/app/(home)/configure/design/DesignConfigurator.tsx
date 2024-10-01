@@ -91,7 +91,7 @@ const DesignConfigurator = () => {
 
     const userImage = new Image();
     userImage.crossOrigin = "anonymous";
-    userImage.src = localStorage.getItem("image") as string;
+    userImage.src = localStorage?.getItem("image") as string;
     await new Promise((resolve) => (userImage.onload = resolve));
 
     ctx?.drawImage(
@@ -104,8 +104,8 @@ const DesignConfigurator = () => {
 
     const base64 = canvas.toDataURL();
 
-    localStorage.setItem("croppedImage", base64);
-    localStorage.setItem("configuration", JSON.stringify(configuration));
+    localStorage?.setItem("croppedImage", base64);
+    localStorage?.setItem("configuration", JSON.stringify(configuration));
 
     router.push(`/configure/preview`);
   }
@@ -144,8 +144,8 @@ const DesignConfigurator = () => {
           default={{
             x: 150,
             y: 205,
-            height: Number(localStorage.getItem("height")) / 4,
-            width: Number(localStorage.getItem("width")) / 4,
+            height: Number(localStorage?.getItem("height")) / 4,
+            width: Number(localStorage?.getItem("width")) / 4,
           }}
           onResizeStop={(_, __, ref, ___, { x, y }) => {
             setRenderedDimension({
@@ -170,7 +170,7 @@ const DesignConfigurator = () => {
         >
           <div className="relative w-full h-full">
             <NextImage
-              src={localStorage.getItem("image") as string}
+              src={localStorage?.getItem("image") as string}
               fill
               alt="your image"
               className="pointer-events-none"
