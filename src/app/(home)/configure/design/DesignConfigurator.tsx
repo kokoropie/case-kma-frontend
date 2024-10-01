@@ -28,8 +28,8 @@ const DesignConfigurator = () => {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [renderedDimension, setRenderedDimension] = useState({
-    height: Number(localStorage.getItem("height")) / 4,
-    width: Number(localStorage.getItem("width")) / 4,
+    height: Number(localStorage?.getItem("height")) / 4,
+    width: Number(localStorage?.getItem("width")) / 4,
   });
 
   const [renderedPosition, setRenderedPosition] = useState({
